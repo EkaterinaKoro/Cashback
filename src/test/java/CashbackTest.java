@@ -1,13 +1,13 @@
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import ru.netology.service.Cashback;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 
 class CashbackTest {
 
     @Test
-    void  StatusRemainCashback0() {
+    public void StatusRemainCashback0() {
         Cashback cashback = new Cashback();
         int amount = 1000;
         int actual = cashback.remain(amount);
@@ -15,17 +15,33 @@ class CashbackTest {
         assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void StatusRemainCashback450() {
+        Cashback service = new Cashback();
+        int amount = 4500;
+        int actual = service.remain(amount);
+        int expected = 450;
+        assertEquals(actual, expected);
+    }
+
     @Test
 
-        public void shouldReturnRemainValue450() {
-            Cashback service = new Cashback();
-            int amount = 4500;
-            int actual = service.remain(amount);
-            int expected = 450;
-            assertEquals(actual, expected);
-        }
+    public void StatusRemainCashback56() {
+        Cashback service = new Cashback();
+        int amount = 800;
+        int actual = service.remain(amount);
+        int expected = 56;
+        assertEquals(actual, expected);
+    }
 
-
+    @Test
+    public void StatusRemainCashback60() {
+        Cashback service = new Cashback();
+        int amount = 1000;
+        int actual = service.remain(amount);
+        int expected = 60;
+        assertEquals(actual, expected);
     }
 
 }
