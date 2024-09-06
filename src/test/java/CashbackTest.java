@@ -1,10 +1,10 @@
-import org.testng.annotations.Test;
+import org.junit.Test;
 import ru.netology.service.Cashback;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 
-class CashbackTest {
+public class CashbackTest {
 
     @Test
     public void StatusRemainCashback0() {
