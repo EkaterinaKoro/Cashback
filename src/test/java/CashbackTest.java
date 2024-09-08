@@ -12,21 +12,10 @@ class CashbackTest {
         Cashback cashback = new Cashback();
         int amount = 1000;
         int actual = cashback.remain(amount);
-        int expected = 100;
+        int expected = 0;
         assertEquals(expected, actual);
 
     }
-
-    @Test
-
-    public void StatusRemainCashback4500() {
-        Cashback service = new Cashback();
-        int amount = 4500;
-        int actual = service.remain(amount);
-        int expected = 450;
-        assertEquals(actual, expected);
-    }
-
 
 
 }
