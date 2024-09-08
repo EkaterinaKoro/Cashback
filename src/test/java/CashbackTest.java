@@ -27,7 +27,7 @@ public class CashbackTest {
 
     @Test
 
-    public void StatusRemainCashback3500() {
+    public void CashbackForPurchaseOfk3500() {
         Cashback service = new Cashback();
         int amount = 3500;
         int actual = service.remain(amount);
@@ -36,7 +36,7 @@ public class CashbackTest {
     }
 
     @Test
-    public void StatusRemainCashback4800() {
+    public void CashbackForPurchaseOf() {
         Cashback service = new Cashback();
         int amount = 4800;
         int actual = service.remain(amount);
