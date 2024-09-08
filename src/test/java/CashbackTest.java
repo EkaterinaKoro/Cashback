@@ -11,36 +11,36 @@ class CashbackTest {
         Cashback cashback = new Cashback();
         int amount = 1000;
         int actual = cashback.remain(amount);
-        int expected = 100;
+        int expected = 0;
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void CashbackForPurchaseOf2000() {
+    public void CashbackForPurchaseOf200() {
         Cashback service = new Cashback();
-        int amount = 2000;
+        int amount = 200;
         int actual = service.remain(amount);
-        int expected = 200;
+        int expected = 800;
         assertEquals(actual, expected);
     }
 
     @Test
 
-    public void CashbackForPurchaseOfk3500() {
+    public void CashbackForPurchaseOfk900() {
         Cashback service = new Cashback();
-        int amount = 3500;
+        int amount = 900;
         int actual = service.remain(amount);
-        int expected = 350;
+        int expected = 100;
         assertEquals(actual, expected);
     }
 
     @Test
-    public void CashbackForPurchaseOf() {
+    public void CashbackForPurchaseOf600() {
         Cashback service = new Cashback();
-        int amount = 4800;
+        int amount = 600;
         int actual = service.remain(amount);
-        int expected = 480;
+        int expected = 400;
         assertEquals(actual, expected);
     }
 
