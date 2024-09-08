@@ -7,40 +7,40 @@ import static org.junit.Assert.assertEquals;
 public class CashbackTest {
 
     @Test
-    public void StatusRemainCashback0() {
+    public void CashbackForPurchaseOf1000() {
         Cashback cashback = new Cashback();
         int amount = 1000;
         int actual = cashback.remain(amount);
-        int expected = 0;
+        int expected = 100;
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void StatusRemainCashback450() {
+    public void CashbackForPurchaseOf2000() {
         Cashback service = new Cashback();
-        int amount = 4500;
+        int amount = 2000;
         int actual = service.remain(amount);
-        int expected = 450;
+        int expected = 200;
         assertEquals(actual, expected);
     }
 
     @Test
 
-    public void StatusRemainCashback56() {
+    public void StatusRemainCashback3500() {
         Cashback service = new Cashback();
-        int amount = 800;
+        int amount = 3500;
         int actual = service.remain(amount);
-        int expected = 56;
+        int expected = 350;
         assertEquals(actual, expected);
     }
 
     @Test
-    public void StatusRemainCashback60() {
+    public void StatusRemainCashback4800() {
         Cashback service = new Cashback();
-        int amount = 1000;
+        int amount = 4800;
         int actual = service.remain(amount);
-        int expected = 60;
+        int expected = 480;
         assertEquals(actual, expected);
     }
 
